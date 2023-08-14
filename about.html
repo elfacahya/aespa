@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Poppins&family=Wix+Madefor+Text&display=swap" rel="stylesheet">
+    <title>Biographies</title>
+<style>
+     .navbar {
+    overflow: hidden;
+    background-color: #B4A7D6;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    }
+
+    .navbar a{
+    float: left;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+                                                
+    }
+
+    .dropdown {
+    float: left;
+    overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+    font-family: 'Caveat', cursive;                                       
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+    font-size: 20px;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color:#c9a0dc;
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B4A7D6;
+    min-width: 160px;
+    box-shadow: 0px 8 px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 2px solid black;
+    }
+
+    .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border: 1px solid black;
+    }
+
+    .dropdown-content a:hover {
+    background-color: #c9a0dc;
+    }
+
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+        color: black;
+        text-shadow: 2px 2px 2px #8e7cc3, 4px 4px 12px #8e7cc3;
+    }
+    
+    .article {
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        margin: 10px;
+    }
+
+    .article img {
+        width: 125px;
+        border: 8px inset #c9a0dc;
+        border-radius: 20px;
+    }
+
+    .article h4 {
+        font-size: 25px;
+        font-family: 'Caveat', cursive;
+        color: #8e7cc3;
+        text-shadow: 2px 2px 2px black, 4px 4px 12px black;
+    }
+
+    .article1 {
+        border: 5px double #8e7cc3;
+        text-align: center;
+        width: 25%;
+        font-family: 'Borel', cursive;
+        font-size: 15px;
+    }
+
+    .article2 {
+        border: 5px double #8e7cc3;
+        text-align: center;
+        width: 25%;
+        font-family: 'Borel', cursive;
+        font-size: 15px;
+    }
+
+    .article3 {
+        border: 5px double #8e7cc3;
+        text-align: center;
+        width: 25%;
+        font-family: 'Borel', cursive;
+        font-size: 15px;
+    }
+
+    .article4 {
+        border: 5px double #8e7cc3;
+        text-align: center;
+        width: 25%;
+        font-family: 'Borel', cursive;
+        font-size: 15px;
+    }
+
+    aside {
+        background-color: #8e7cc3;
+    }
+    aside h3 {
+        font-family: 'Caveat', cursive;
+        color: #8e7cc3;
+        text-shadow: 2px 2px 2px black, 4px 4px 12px black;
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .fa-youtube-play {
+        border-radius: 10px;
+        color: white;
+    }
+
+    .fa-twitter {
+        border-radius: 10px;
+        color: white;
+    }
+
+    .fa-weibo {
+        border-radius: 10px;
+        color: white;
+    }
+
+    .fa-instagram {
+        border-radius: 10px;
+        color: white;
+    }
+
+    .footer {
+        width: 100%;
+        background-color: #8e7cc3;
+        float: left;
+        color: black;
+        font-family: 'Borel', cursive;
+    }
+
+    .footer h3 {
+        float: right;
+        margin-right: 8px;
+    }
+    .footer img {
+        width: 20px;
+        float: right;
+        margin-right: 8px;
+        margin-top: 25px;
+    }
+
+    
+    @media (max-width: 600px) {
+        aside, .article, .footer{
+            width: 100%;
+            height: auto;
+        }
+        .article img {
+            width: 60px;
+        }
+        .article1, .article2, .article3 , .article4, .fa , aside h3{
+            font-size: 9px;
+        }
+        aside a {
+            font: 8px;
+        }
+        .article h4 {
+            font-size: 15px;
+        }
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <img src="images/aespa_logo.png" width="100px">
+    </header>
+    
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class ="dropdown">
+            <button class="dropbtn">About
+            </button>
+            <div class="dropdown-content">
+                <a href="about.html">Biographies</a>
+                <a href="pictures.html">Pictures</a>
+            </div>
+        </div>
+        <a href="schedule.html">Schedule</a></li>
+        <a href="music.html">Music</a></li>
+        <a href="login.html">Store</a></li>
+    </div>
+
+    <h2>PROFIL</h2>
+       
+    <div class="article">
+        <br>
+        <div class="article1">
+            <h4>Karina</h4>
+            <img src="images/bio_karina.jpg">
+                <p>Nama Panggung   : Karina (카리나) </p>
+                <p>Nama Lahir      : Yoo Jimin (유지민) </p>
+                <p>Posisi          : Vokalis, Rapper, Dancer </p>
+                <p>Tanggal Lahir   : 11 April 2000 </p>     
+        </div>
+        <div class="article2">
+            <h4>Giselle</h4>
+            <img src="images/bio_giselle.jpg">
+                <p>Nama Panggung   : Giselle (지젤) </p>
+                <p>Nama Lahir      : Aeri Uchinaga (うちながえり/우치나가에리) </p>
+                <p>Nama Inggris    : Chloe</p>
+                <p>Posisi          : Rapper </p>
+                <p>Tanggal Lahir   : 30 Oktober 2000 </p>    
+        </div>
+        <div class="article3">
+            <h4>Winter</h4>
+            <img src="images/bio_winter.jpg">
+                <p>Nama Panggung   : Winter (윈터) </p>
+                <p>Nama Lahir      : Kim Minjeong (김민정) </p>
+                <p>Posisi          : Vokalis, Dancer </p>
+                <p>Tanggal Lahir   : 1 Januari 2001 </p>
+        </div>
+        <div class="article4">
+            <h4>Ningning</h4>
+        <img src="images/bio_ningning.jpg">
+            <p>Nama Panggung   : Ningning (닝닝) </p>
+            <p>Nama Lahir      : Ning Yizhuo (宁艺卓) </p>
+            <p>Nama Korea      : Jeo Yetak (저예탁)</p>
+            <p>Nama Inggris    : Ning Vivian</p>
+            <p>Posisi          : Vokalis, Maknae </p>
+            <p>Tanggal Lahir   : 23 Oktober 2002 </p>     
+        </div>
+    </div>
+
+    <aside>
+        <h3>OFFICIAL ACCOUNT</h3>
+        <a class="" href="https://twitter.com/aespa_official?t=F3jbbBR-rnJe_PLvEMKOvQ&s=09" target="_blank"><i class="fa fa-twitter"> aespa_official</i></a>
+        <a class="" href="https://instagram.com/smtown?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"> smtown</i></a>
+        <a class="" href="https://instagram.com/my_aespa?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"> my_aespa</i></a>
+        <a class="" href="https://instagram.com/aespa_official?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"> aespa_official</i></a>
+        <a class="" href="https://www.youtube.com/@SMTOWN" target="_blank"><i class="fa fa-youtube-play"> smtown</i></a>
+        <a class="" href="https://www.youtube.com/@aespa" target="_blank"><i class="fa fa-youtube-play"> aespa</i></a>
+        <a class="" href="https://weibo.com/aespa" target="_blank"><i class="fa fa-weibo"> aespa_official</i></a>
+        <br>
+        <hr>
+        <br>
+        <h3>OFFICIAL ACCOUNT INSTAGRAM MEMBER</h3>
+        <a class="" href="https://instagram.com/katarinabluu?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"> katarinabluu</i></a>
+        <a class="" href="https://instagram.com/aerichandesu?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"> aerichandesu</i></a>
+        <a class="" href="https://instagram.com/imwinter?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"> imwinter</i></a>
+        <a class="" href="https://instagram.com/imnotningning?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"> imnotningning</i></a>
+    </aside>
+    <div class="footer">
+        <p>Copyright @SM Entertainment</p>
+        <h3>contact us</h3>
+        <img src="images/email.png">
+    </div>
+</body>
+</html>

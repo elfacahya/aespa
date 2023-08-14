@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <title>Pictures</title>
+</head>
+<style>
+    .navbar {
+    overflow: hidden;
+    background-color: #B4A7D6;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    }
+
+    .navbar a{
+    float: left;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+                                                
+    }
+
+    .dropdown {
+    float: left;
+    overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+    font-family: 'Caveat', cursive;                                       
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;;
+    background-color: inherit;
+    font-size: inherit;
+    margin: 0;
+    font-size: 20px;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color:#c9a0dc;
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B4A7D6;
+    min-width: 160px;
+    box-shadow: 0px 8 px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 2px solid black;
+    }
+
+    .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border: 1px solid black;
+    }
+
+    .dropdown-content a:hover {
+    background-color:#c9a0dc;
+    }
+
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+
+    input {
+        display: none;
+    }
+
+   .container {
+    width: 100%;
+    text-align: center;
+   }
+
+   h1 {
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+    font-family: 'Borel', cursive;
+    
+   }
+
+   h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #8e7cc3;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+   }
+
+   @media (max-width: 600px) {
+    .footer , .input{
+        width:100%;
+    }
+
+    h1,h3, label {
+        font-size: 15px;
+    }
+   }
+
+   @keyframes animate {
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        width: 100px;
+    }
+   }
+
+   .top-content {
+    background-color: #B4A7D6;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px;
+   }
+
+   h3 {
+    height: 100%;
+    background-color: #8e7cc3;
+    line-height: 60px;
+    padding: 0 50px;
+    color: black;
+    font-family: 'Barlow', sans-serif;
+   }
+
+   label {
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    transition: .5s;
+    font-family: 'Barlow', sans-serif;
+   }
+
+   label:hover {
+    color: #8e7cc3;
+   }
+
+   .photo-gallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+   }
+
+   .pic {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px;
+    cursor: pointer;
+    transition: .5s;
+   }
+
+   .pic img {
+    width: 100%;
+    border-radius: 5px;
+   }
+   
+   .all::before {
+    content: "All Member";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -58px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+   }
+
+   .karina::before {
+    content: "Karina";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -58px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+   }
+
+   .giselle::before {
+    content: "Giselle";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -58px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+   }
+
+   .winter::before {
+    content: "Winter";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -58px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+   }
+
+   .ningning::before {
+    content: "Ningning";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -58px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+   }
+
+   .pic::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    height: 0;
+    background-color: rgb(0, 0, 0, .4);
+    transition: .3s;
+   }
+
+   .pic:hover::after {
+    height: 100%;
+   }
+
+   .pic:hover::before {
+    margin-top: 0;
+    opacity: 1;
+   }
+
+    #check1:checked ~ .container .photo-gallery .pic {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+
+    #check2:checked ~ .container .photo-gallery .all {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+        transition: 0s;
+    }
+
+    #check2:checked ~ .container .photo-gallery .karina,
+    #check2:checked ~ .container .photo-gallery .giselle,
+    #check2:checked ~ .container .photo-gallery .winter,
+    #check2:checked ~ .container .photo-gallery .ningning
+    {
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    } 
+
+    #check3:checked ~ .container .photo-gallery .karina {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+
+    #check3:checked ~ .container .photo-gallery .all,
+    #check3:checked ~ .container .photo-gallery .giselle,
+    #check3:checked ~ .container .photo-gallery .winter,
+    #check3:checked ~ .container .photo-gallery .ningning
+    {
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    } 
+
+    #check4:checked ~ .container .photo-gallery .giselle {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+
+    #check4:checked ~ .container .photo-gallery .all,
+    #check4:checked ~ .container .photo-gallery .karina,
+    #check4:checked ~ .container .photo-gallery .winter,
+    #check4:checked ~ .container .photo-gallery .ningning
+    {
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    } 
+
+    #check5:checked ~ .container .photo-gallery .winter {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+
+    #check5:checked ~ .container .photo-gallery .all,
+    #check5:checked ~ .container .photo-gallery .karina,
+    #check5:checked ~ .container .photo-gallery .giselle,
+    #check5:checked ~ .container .photo-gallery .ningning
+    {
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    } 
+
+    #check6:checked ~ .container .photo-gallery .ningning {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+
+    #check6:checked ~ .container .photo-gallery .all,
+    #check6:checked ~ .container .photo-gallery .karina,
+    #check6:checked ~ .container .photo-gallery .giselle,
+    #check6:checked ~ .container .photo-gallery .winter
+    {
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    } 
+
+    button {
+       font-family: 'Barlow', sans-serif;
+        background: #c9a0dc;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 20px;
+        width: 50%;
+        cursor: pointer;
+    }
+    
+    button:hover{
+    opacity: 70%;
+    }
+
+    .footer {
+        width: 100%;
+        background-color: #8e7cc3;
+        float: left;
+        color: black;
+        font-family: 'Borel', cursive;
+    }
+
+    .footer h3 {
+        float: right;
+    }
+
+    .footer img {
+        width: 20px;
+        float: right;
+        margin-top: 40px;
+    }
+    
+</style>
+<body>
+    <header>
+        <img src="images/aespa_logo.png" width="100px">
+    </header>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class ="dropdown">
+            <button class="dropbtn">About</button>
+            <div class="dropdown-content">
+                <a href="about.html">Biographies</a>
+                <a href="pictures.html">Pictures</a>
+            </div>
+        </div>
+        <a href="schedule.html">Schedule</a></li>
+        <a href="music.html">Music</a></li>
+        <a href="login.html">Store</a></li>
+    </div>
+
+    <input type="radio" name="Photos" id="check1" checked>
+    <input type="radio" name="Photos" id="check2">
+    <input type="radio" name="Photos" id="check3">
+    <input type="radio" name="Photos" id="check4">
+    <input type="radio" name="Photos" id="check5">
+    <input type="radio" name="Photos" id="check6">
+
+    <div class="container">
+        <h1>Gallery</h1>
+        <div class="top-content">
+            <h3>Photo Gallery</h3>
+            <label for="check1">All Photos</label>
+            <label for="check2">All Member</label>
+            <label for="check3">Karina</label>
+            <label for="check4">Giselle</label>
+            <label for="check5">Winter</label>
+            <label for="check6">Ningning</label>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="pic all">
+                <img src="images/all_member_1.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_2.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_3.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_4.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_5.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_6.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_7.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_8.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_9.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member_10.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member11.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member12.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member13.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member14.jpg">
+            </div>
+            <div class="pic all">
+                <img src="images/all_member15.jpg">
+            </div>
+            <div class="pic karina">
+                <img src="images/karinaa.jpeg">
+            </div>
+            <div class="pic karina">
+                <img src="images/karina2.jpg">
+            </div>
+            <div class="pic karina">
+                <img src="images/karina3.jpg">
+            </div>
+            <div class="pic karina">
+                <img src="images/karina4.jpg">
+            </div>
+            <div class="pic karina">
+                <img src="images/karina5.jpg">
+            </div>
+            <div class="pic karina">
+                <img src="images/karina6.jpg">
+            </div>
+            <div class="pic karina">
+                <img src="images/karina7.jpg" >
+            </div>
+            <div class="pic karina">
+                <img src="images/karina8.jpg" >
+            </div>
+            <div class="pic karina">
+                <img src="images/karina9.jpg" >
+            </div>
+            <div class="pic karina">
+                <img src="images/karina10.jpg" >
+            </div>
+            <div class="pic karina">
+                <img src="images/karina11.jpg" >
+            </div>
+            <div class="pic karina">
+                <img src="images/karina12.jpg" >
+            </div>
+            <div class="pic karina">
+                <img src="images/karina13.jpg" >
+            </div>
+            <div class="pic karina">
+                <img src="images/karina14.jpg" >
+            </div>
+            <div class="pic karina">
+                <img src="images/karina15.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle1.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle2.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle3.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle4.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle5.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle6.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle7.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle8.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle9.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle10.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle11.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle12.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle13.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle14.jpg" >
+            </div>
+            <div class="pic giselle">
+                <img src="images/giselle15.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter1.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter2.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter3.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter4.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter5.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter6.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter7.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter8.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter9.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter10.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter11.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter12.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter13.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter14.jpg" >
+            </div>
+            <div class="pic winter">
+                <img src="images/winter15.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning1.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning2.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning3.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning4.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning5.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning6.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning7.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning8.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning9.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning10.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning11.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning12.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning13.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning14.jpg" >
+            </div>
+            <div class="pic ningning">
+                <img src="images/ningning15.jpg" >
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright @SM Entertainment</p>
+        <h3>contact us</h3>
+        <img src="images/email.png">
+    </div>
+</body>
+</html>

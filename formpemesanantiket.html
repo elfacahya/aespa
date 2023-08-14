@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma&family=Barlow:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>Form Pemesanan Tiket</title>
+<style>
+    .container {
+            width:100%;
+            display: flex;
+            max-width: 960px;
+            justify-content: center;
+        }
+        
+        .form {
+            width: 400px;
+        }
+
+        form {
+            width: 250px;
+        }
+
+        h1 {
+            margin: 20px;
+            text-align: center;
+            font-weight: bolder;
+            text-transform: uppercase;
+            font-family: 'Atma', cursive;
+        }
+
+        hr {
+            border-top: 2px solid #8e7cc3;
+        }
+
+        .right img {
+            width: 30%;
+            border: 3px inset #8e7cc3;
+        }
+
+        form label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 5px;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        input {
+            width: 100%;
+            margin: 2px;
+            border: none;
+            outline: none;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            padding: 8px;
+            width: 270px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: #8e7cc3;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        button:hover {
+            opacity: 70%;
+        }
+
+        .form-control {
+            width: 108%;
+            height: 30px;
+        }
+
+        @media (max-width:880px) {
+            .right img {
+                width: 100%;
+                height: 100%;
+            }
+            .container {
+                width: 100%;
+                max-width: 750px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            form {
+                width: 300px;
+            }
+
+            .login {
+                width: 400px;
+                padding: 20px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+</style>
+</head>
+<body>
+    <center> 
+        <div class="right">
+            <img src="images/aespa-png.png" alt="Aespa">
+        </div>
+        <div class="container">
+            <div class="form">
+                <form action="formpemesanantiket.php" method="post" target="_blank">
+                    <h1>Form Pemesanan Tiket</h1>
+                    <hr>
+                    <br>
+                    <label for="text">Name</label>
+                    <input type="text" name="name" required><br><br>
+                    <label for ="nohp">No Hp</label>
+                    <input type ="text" name="nohp" required><br><br>
+                    <label for="jumlah">Jumlah Tiket</label>
+                    <input type="number" id="jumlah" name="cardnumber" min="0" max="" required><br><br>
+                    <label for="jumlah">Jenis Tiket</label>
+                    <select class="form-control" name="combo1" id="combo1">
+                        <option value="Cat4A, 4B, Standing (warna pink) Rp 1.100.000">Cat4A, 4B, Standing (warna pink) Rp 1.100.000</option>
+                        <option value="Cat 3A, 3B Standing (Warna hijau) Rp 1.550.000">Cat 3A, 3B Standing (Warna hijau) Rp 1.550.000</option>
+                        <option value="Cat 1, Seated (warna orange) Rp 2.550.000 ">Cat 1, Seated (warna orange) Rp 2.550.000 </option>
+                        <option value="Cat 1C, 1D Standing (warna biru) Rp 2.750.000">Cat 1C, 1D Standing (warna biru) Rp 2.750.000</option>
+                    </select><br><br>
+                    <label for="metode">Metode Pembayaran</label>
+                    <select class="form-control" name="combo2" id="combo2">
+                        <option value="Dana">Dana</option>
+                        <option value="Mandiri">Mandiri</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BNI">BNI</option>
+                        <option value="Bank Kalbar">Bank Kalbar</option>
+                    </select>
+                    <button type="submit" onclick="alert('Terima kasih anda telah memesan tiket')">Pesan</button>
+                </form>
+            </div>
+        </div>
+        </center>
+        <br><br>
+        <center><a href="store.html"><button>Back</button></a></center>
+</body>
+</html>

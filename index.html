@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Poppins&family=Wix+Madefor+Text&display=swap" rel="stylesheet">
+    <title>Home</title>
+<style>
+ 
+    .navbar {
+    overflow: hidden;
+    background-color: #B4A7D6;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    
+}
+
+    .navbar a{
+    float: left;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+                                                
+    }
+
+    .dropdown {
+    float: left;
+    overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+    font-family: 'Caveat', cursive;                                       
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-size: inherit;
+    margin: 0;
+    font-size: 20px;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #c9a0dc;
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B4A7D6;
+    min-width: 160px;
+    box-shadow: 0px 8 px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 2px solid black;
+    }
+
+    .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border: 1px solid black;
+    }
+
+    .dropdown-content a:hover {
+    background-color: #c9a0dc;
+    }
+
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+
+    .slider {
+        overflow: hidden;
+    }
+
+    .slider figure div {
+        width: 20%;
+        float: left;
+    }
+
+    .slider figure img {
+        width: 100%;
+        float: left;
+    }
+
+    .slider figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        animation: animate 15s infinite;
+    }
+
+    @keyframes animate {
+        0%{left:0%;}
+        10%{left:0%;}
+        12%{left:-100%;}
+        22%{left:-100%;}
+        24%{left:-200%;}
+        34%{left:-200%;}
+        36%{left:-300%;}
+        46%{left:-300%;}
+        48%{left:-400%;}
+        58%{left:-400%;}
+        60%{left:-300%;}
+        70%{left:-300%;}
+        72%{left:-200%;}
+        82%{left:-200%;}
+        84%{left:-100%;}
+        94%{left:-100%;}
+        96%{left:0%;} 
+    }
+
+    article {
+        width: 70%;
+        height: 800px;
+        float: right;
+        padding: 30px;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        text-align: justify;
+    }
+
+    aside h3 {
+        text-align: center;
+    }
+
+    aside {
+        background-color: #8e7cc3;
+        margin-left: 0%;
+        height: 800px;
+        width: 30%;
+        color: black;
+        float: left;
+        padding: 10px;
+        border: 2px solid #20124D;
+        font-family: 'Wix Madefor Text', sans-serif;
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    @media (max-width: 600px) {
+        article, aside, .navbar, .footer{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    marquee {
+        color:#20124D;
+        font-size: 25px;
+        border: 2px solid #20124D;
+        font-family: 'Wix Madefor Text', sans-serif;
+    }
+
+    .footer {
+        width: 100%;
+        background-color: #8e7cc3;
+        float: left;
+        color: black;
+        font-family: 'Borel', cursive;
+    }
+
+    .footer h3 {
+        float: right;
+        margin-right: 8px;
+    }
+    .footer img {
+        width: 20px;
+        float: right;
+        margin-right: 8px;
+        margin-top: 25px;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <img src="images/aespa_logo.png" width="100px">
+    </header>
+    
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class ="dropdown">
+            <button class="dropbtn">About
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="about.html">Biographies</a>
+                <a href="pictures.html">Pictures</a>
+            </div>
+        </div>
+        <a href="schedule.html">Schedule</a></li>
+        <a href="music.html">Music</a></li>
+        <a href="login.html">Store</a></li>
+    </div>
+    
+    <div class="slider">
+        <figure>
+            <div class="slide">
+                <img src="images/image1.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="images/image2.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="images/image3.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="images/image4.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="images/image5.jpg" alt="">
+            </div>
+        </figure>
+    </div>
+    <br>
+    <marquee scrollamount="10" direction="right">
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING 
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+        KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING KARINA GISELLE WINTER NINGNING
+    </marquee>
+    <br><br>
+        <aside>
+            <h3>LATEST NEWS</h3>
+            <ul>
+                <li>Aespa mendapatkan peringkat #1 pada penjualan album hari pertama oleh grup wanita</li><br>
+                <li>3rd mini album 'MY WORLD' oleh aespa berhasil debut di peringkat #8 di French Physical Albums chart (SNEP)</li><br>
+                <li>Ningning bersama dengan idol lainnya disebutkan di salah satu artikel Harpers Bazaar Korea di bawah kategori 'Fashion 
+                        terkait dengan tas 'hobo' yang sedang menjadi trend akhir-akhir ini, dan Ningning mewakili brand 'Versace'</li><br>
+                <li>Dengan total 7 lagu, aespa berada di peringkat #3 dalam "4th gen groups with most songs with at least 40M streams on Melon</li><br>
+                <li>Memiliki selera yang bagus, Karina saat ini sedang trending dan jadi perbincangan hangat Knetz di Pannate terkait dengan idol
+                        wanita gen ke-4 favoritnya di masing-masing grup.</li><br>
+                 <li>Satu-satunya idol K-pop wanita di top 5, aespa berada di peringkat ke #4 dalam "Biggest kpop artists in the US this week
+                        (via Billboard Artist 100 chart).</li>
+            </ul>
+        </aside>
+        <article>
+            <h5>aespa (에스파), ditulis dengan æspa, adalah girl grup asal Korea Selatan yang dibentuk oleh SM Entertainment. 
+                    Grup ini terdiri dari empat anggota yaitu Karina, Giselle, Winter dan Ningning. 
+                    Mereka melaksanakan debut pada 17 November 2020 dengan single 'Black Mamba'
+            </h5>
+            <h5>Nama aespa berasal dari penggabungan ‘æ’ yang berasal dari ‘Avatar X Pengalaman’ & ‘aspek’.
+                    Makna di balik nama tersebut adalah berbagai kegiatan inovatif yang akan hadir dengan tema 
+                    ‘Mendapatkan pengalaman dunia baru melalui pertemuan ‘avatar’  dan ‘diri kamu yang lain’. Hal inilah yang mencuri
+                    perhatian banyak orang dengan konsep unik yang dimiliki girlgroup kpop rookie yang dinaungi SM Entertainment tersebut 
+                    berbeda dengan grup kpop lainnya. SM Entertainment telah menyebut, jika aespa merupakan dunnia awal baru. Di mana, girlgroup
+                    satu ini menggabungkan teknologi awal baru, bersama dengan musik. Para avatar tersebut nantinya bisa berkomunikasi dengan para anggota
+                    aespa yang asli. Namun, mereka hidup di dunia lain yang disebut sebagai "Kwangya".
+            </h5>
+            <h5>Untuk nama fandomnya sendiri, pihak agensi mengkonfirmasi bahwa nama fans aespa akan dikenal sebagai "MY" (diucapkan
+                seperti kata bahasa Inggris). aespa mengartikan MY sebagai "temanku yang berharga". Kemudian panggilan untuk para MY
+                yang ada di Indonesia sejak 17 November 2020 telah dibuat atas voting bersama. Nama MYne sendiri diadaptasi dari 2 kata,
+                yakni 'MY' yaitu nama fandom aespa juga 'ne' dari 'indonesia' dimana 'MYNE' bisa menjadi arti sebuah kepemilikan (MINE) 
+                & teman paling berharga (MY).
+            </h5>
+        </article>
+    <div class="footer">
+        <p>Copyright @SM Entertainment</p>
+        <h3>contact us</h3>
+        <img src="images/email.png">
+    </div>
+</body>
+</html>
